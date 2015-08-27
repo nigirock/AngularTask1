@@ -14,12 +14,10 @@
 <div class="container">
     <div class="well"><h1 class="text-center">News</h1></div>
     <div ng-repeat="item in data" class="well">
-        <h1>{{item.title}}</h1>
+        <h1 ng-cloak="">{{item.title}}</h1>
         <p>{{item.published}}</p>
         <p>{{item.description}}</p>
-        <form action="//itvdn.com/ru/news/article?id=vebinar-entity-framework6">
-            <button class="btn btn-primary" type="submit">Читать дальше</button>
-        </form>
+        <a ng-href="{{item.link}}" class="btn btn-primary">Читать дальше</a>
     </div>
 </div>
 
